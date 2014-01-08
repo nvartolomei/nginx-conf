@@ -1,0 +1,8 @@
+events {
+    include    nginx-conf/system/connections.conf;
+}
+
+http {
+    # ./sites/ is where your configurations for sites lives
+    include    sites/*.conf;
+}
