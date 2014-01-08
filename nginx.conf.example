@@ -1,8 +1,24 @@
+user www-data;
+
+worker_processes        auto;
+worker_rlimit_nofile    16384;
+
 events {
-    include    nginx-conf/system/connections.conf;
+    worker_connections    8192;
 }
 
 http {
+    include    mime.types;
+
+    include    nginx-conf/logs/formats.conf;
+    include    nginx-conf/logs/access.conf;
+    include    nginx-conf/logs/error.conf;
+
+    include    nginx-conf/http.conf;
+    include    nginx-conf/gzip.conf;
+
+    include    nginx-conf/maps/*.conf;
+
     # ./sites/ is where your configurations for sites lives
     include    sites/*.conf;
 }
