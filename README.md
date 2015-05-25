@@ -1,7 +1,7 @@
 # NGINX-Conf
 
 A collection of must-have nginx configuration snippets, carefully crafted and
-tested.
+tested, intended for personal use, you'd better check [Michael Goreanski](https://github.com/Umkus/nginx-boilerplate)'s nginx-boilerplate project.
 
 ## Install
 Clone this repository to nginx configuration prefix directory (usually `/usr/local/nginx/conf`).
